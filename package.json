@@ -1,0 +1,19 @@
+{
+  "name": "marked-mailchimp",
+  "version": "1.0.0",
+  "description": "Fixes code formatting within mailchimp emails, for users of the marked markdown renderer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "marked",
+    "mailchimp"
+  ],
+  "author": "jonahss",
+  "license": "ISC",
+  "devDependencies": {
+    "highlight.js": "^9.13.1",
+    "marked": "^0.6.0"
+  }
+}
