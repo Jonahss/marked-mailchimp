@@ -26,8 +26,9 @@ function MailchimpRenderer (marked, opts = {}) {
     })
 
     lines = lines.map(line => `<span style="margin-left:${line.indentLevel*pixesPerIndent}px">${line.content}</span>`)
+    const langClass = lang ? ` class="language=${lang}"` : '';
 
-    return `<div class="marked-mailchimp"><code class="language-${lang}">${lines.join('<br>')}</code></div>`
+    return `<div class="marked-mailchimp"><code${langClass}>${lines.join('<br>')}</code></div>`
   }.bind(marked)
 
   return renderer
