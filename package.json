@@ -11,6 +11,10 @@
     "mailchimp"
   ],
   "author": "jonahss",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/Jonahss/marked-mailchimp.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "highlight.js": "^9.13.1",
