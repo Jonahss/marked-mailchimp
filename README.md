@@ -11,13 +11,13 @@ let marked = require('marked')
 let { highlightAuto } = require('highlight.js');
 let MailchimpRenderer = require('marked-mailchimp')
 
-function highlight(code) {
-  return highlightAuto(code).value;
+function highlight(code, lang) {
+  return highlightAuto(code, lang.length ? [lang] : null).value;
 }
 
 let opts = {
   spacesPerIndent: 4,
-  pixelsPerIndent: 20
+  pixelsPerIndent: 30
 }
 
 marked.setOptions({
@@ -27,4 +27,4 @@ marked.setOptions({
 ```
 
 `spacesPerIndent` defaults to 4
-`pixesPerIndent` defaults to 20
+`pixesPerIndent` defaults to 30

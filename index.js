@@ -4,12 +4,12 @@ function MailchimpRenderer (marked, opts = {}) {
     pixelsPerIndent: 20
   }
   Object.assign(defaults, opts)
-  
+
   let renderer = new marked.Renderer()
 
   renderer.code = function (code, lang, escaped) {
     let spacesPerIndent = 4
-    let pixesPerIndent = 20
+    let pixesPerIndent = 30
 
     if (this.defaults.highlight) {
       code = this.defaults.highlight(code, lang)
@@ -27,7 +27,7 @@ function MailchimpRenderer (marked, opts = {}) {
 
     lines = lines.map(line => `<span style="margin-left:${line.indentLevel*pixesPerIndent}px">${line.content}</span>`)
 
-    return `<code class="language-${lang}">${lines.join('<br>')}</code>`
+    return `<div class="marked-mailchimp"><code class="language-${lang}">${lines.join('<br>')}</code></div>`
   }.bind(marked)
 
   return renderer
