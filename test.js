@@ -3,7 +3,7 @@ let { highlightAuto } = require('highlight.js');
 let MailchimpRenderer = require('./index.js')
 
 function highlight(code, lang) {
-  return highlightAuto(code, lang.length ? [lang] : null).value;
+  return highlightAuto(code, (lang && lang.length) ? [lang] : null).value;
 }
 
 marked.setOptions({
